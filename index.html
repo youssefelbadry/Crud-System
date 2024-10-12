@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Management System</title>
+    <link rel="stylesheet" href="boot/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.css" />
+  </head>
+  <body>
+    <div class="head">
+      <h2>CRUDS</h2>
+      <p>CREATE RESD UPDATE DELETE SEARCH</p>
+    </div>
+
+    <div class="inputs">
+      <input type="text" placeholder="title" id="title" />
+      <div class="prise">
+        <input onkeyup="getTotal()" type="number" placeholder="price" id="price" />
+        <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes" />
+        <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads" />
+        <input onkeyup="getTotal()" type="number" placeholder="discount" id="discount" />
+        <small id="total"></small>
+      </div>
+      <input type="number" placeholder="count" id="count" />
+      <input type="text" placeholder="category" id="category" />
+      <button id="create">Create</button>
+      <input type="text" placeholder="Search" id="search" onkeyup="searchData(this.value)" />
+<div class="buttons">
+      <button onclick="getSearchMood(this.id)" id="bytitle">Search By Title</button>
+      <button onclick="getSearchMood(this.id)" id="bycategory">Search By Category</button>
+    </div>
+</div>
+
+    <div class="output">
+        <div class="deletediv">
+           
+        </div>
+<table>
+    <tr>
+        <td>ID</td>
+        <td>TITLE</td>
+        <td>PRICE</td>
+        <td>ADS</td>
+        <td>DICOUNT</td>
+        <td>TOTAL</td>
+        <td>CATEGORY</td>
+        <td>UPDATE</td>
+        <td>DELETE</td>
+    </tr>
+    <tbody id="tbody">
+   
+</tbody>
+</table>
+
+
+    </div>
+
+    <script src="boot/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
